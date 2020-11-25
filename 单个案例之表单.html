@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    input{
+        border-bottom: 1px solid #000;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        display: block;
+    }
+.content {
+display:flex;
+flex-direction:column;
+justify-content:center;
+background-color:white;
+border-radius:5px 5px 0 0;
+}
+.content>.item {
+    align-self:center;
+    width:100%;
+    height:auto;
+
+}
+ input select{
+    display:block;
+    outline:none;
+    margin:0.35rem;
+     
+}
+.importantStar:before{
+content:'*';
+color:red;
+
+}
+
+h1 label{
+    font-size:20px;
+   
+}
+.thePage{
+    margin:0;
+    border:0;
+}
+.item{
+    margin:0.5rem;
+ 
+}
+
+.sel_wrap{
+    border:0;
+}
+.sel_wrap>input{
+   
+}
+.input_select_title {
+    outline:1px !important;
+    border:1px solid !important;
+    width:95%;
+    text-align:center;
+}
+</style>
+
+</head>
+<body>
+    
+<div class = "thePage" >
+  <form action="">
+    <div class="header" style = "background-color:blue;">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;color:white;word-wrap:true;text-align:center;">招聘表单</h1>
+    </div>
+
+    <div class="content">
+           <div class="item ">
+            <label class="importantStar" for="jobType">应聘岗位
+            <input type="text" placeholder="请输入" id="jobType" style="width:95%" required autofocus>
+        </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">填表日期
+            
+                <input type="date" required >
+            </label><!--
+                    <select class="select" name="" id="c_city">
+                <option value="0">请选择</option>
+                <option value="1">中山市</option>
+                <option value="2">太原市</option>
+                <option value="3">广州市</option>
+                </select>
+                -->
+
+                </div>
+        </div>
+        
+        <div class="item ">
+            <label class="importantStar">姓名
+            
+                <input type="text" placeholder="请输入" id="name" style="width:95%;" required >
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">出生日期
+            <input type="date" required>
+            </label>
+        </div>
+
+    
+
+        <div class="item ">
+            <label class="importantStar" for="nation">民族
+            <input type="text" placeholder="请输入" id="nation" style="width:95%">
+        </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar" for="politicalOutlook">政治面貌
+            <input type="text" placeholder="请输入" id="politicalOutlook" style="width:95%">
+        </label>
+        </div>
+
+
+        <div class="item ">
+            <label class="importantStar">婚否
+                <div class="sel_wrap">
+            <input class="input_select_title" type="text"  id ="selectInput" onclick="SelectFun()" value="请选择▼">   
+            
+            <ul>
+                <li>未婚</li>
+                <li>已婚</li>
+
+            </ul>
+            
+
+
+
+            
+             <!--   <select  name=""  id="c_city">
+                <option value="" selected="selected">请选择</option>
+                <option value="0" >未婚</option>
+                <option value="1">已婚</option>
+             
+                </select>
+                -->
+                </div>
+            </label>
+                
+                
+
+        </div>
+            
+
+        <div class="item ">
+            <label class="importantStar">健康状况
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">籍贯（省、市）
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">联系方式
+            <input type="tel" placeholder="请输入"  style="width:95%">
+            </label>
+        </div>
+
+        
+        <div class="item ">
+            <label class="importantStar">电子邮箱
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">学历
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">现住地
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">目前是否在职
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+
+        <div class="item ">
+            <label class="importantStar">预计到岗时间 </label>
+            <div class="sel_wrap">
+                <input type="date" required>
+                
+           
+            </div>
+
+        <div class="item ">
+            <label class="importantStar">期望薪资
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">外语水平
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">计算机水平
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">教育经历（请至少完整填写一行）
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="importantStar">工作经历（请至少完整填写一行，没有则写“<span style="color:red;">无</span>”）
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="item ">
+            <label class="">个人荣誉
+            <input type="text" placeholder="请输入"  style="width:95%" >
+            </label>
+        </div>
+        <div class="item ">
+            <label class="">兴趣特长
+            <input type="text" placeholder="请输入"  style="width:95%" >
+            </label>
+        </div>
+        <div class="item ">
+            <label class="importantStar">自我评价
+            <input type="text" placeholder="请输入"  style="width:95%" required>
+            </label>
+        </div>
+
+        <div class="submit" >
+
+            <input type="submit" value="提交" style="background-color:blue;width:100%;" onclik="function check()"></button>
+        </div>
+    </form>
+    </div>        
+    
+
+</div>
+</div>
+<script>
+    function selectedFun()
+    {
+        var selectInput=document.getElementById("selectInput");
+        selectInput{
+
+        }
+    }
+   /*填表日期自动获取
+    strDate=new date();
+*/
+function check(){
+    //第一，如果星标项目没有填写，不提交；
+    //第二，如果日期、选择或者输入明显错误，不提交；
+    //12情况保存并标出错误；else提交
+}
+
+/*importantStar class的都加required*/
+</script>
+</body>
+</html>
